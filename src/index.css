@@ -1,5 +1,43 @@
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: mistyrose;
 }
+
+.jumbotron {
+	text-align: center;
+	background: lightskyblue;
+}
+
+.motto {
+	font-family: 'Patua One', cursive;
+	color: crimson;
+}
+
+.card-body {
+	font-size: 25px;
+}
+
+img {
+	height: 50%;
+	width: 50%;
+}
+
+.randfloof {
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 45px;
+	color: crimson;
+}
+
+.searchfloof {
+	font-family: 'Berkshire Swash', cursive;
+	font-size: 45px;
+	color: crimson;
+}
+
+th {
+	font-size: 25px;
+}
+

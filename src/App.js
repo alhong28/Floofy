@@ -41,15 +41,47 @@ class App extends Component {
 
     return (
       <div>
-      	<button className="btn-primary" onClick={this.randomClick}>Get Random Pet!</button>
-      	<input value={this.state.zip} onChange={this.zipChange} type="text"/>
-      	<select onChange={this.selectType}>
-      		{options}
-      	</select>
-      	<button onClick={this.handleSubmit}>Search</button>
+      		<div className="jumbotron container-fluid">
+      			<img src={require("./images/floofy.jpg")} />
+      			<br></br>
+      			<br></br>
+      			<br></br>
+      			<p className="lead motto">A Friend in Need is a Floof indeed!</p>   			
+      		</div>
 
-      	<Route path="/random" render={(props) => <RandomPetBox pet={this.props.randomPet}/>} />
-      	<Route path="/search" render={(props) => <PetSearch {...props} pets={this.props.pets} />}/>
+      		<br></br>
+
+	      	<div className="card container" style={{width: 45% +'em'}}>
+	      		<div className="card-body">
+	      			<h5 className="card-title randfloof">Floof of Fate</h5>
+	      			<img src={require("./images/dog.jpeg")} />
+			      		<button className="btn-success" onClick={this.randomClick}>Get Random Pet!</button>
+			     </div>
+			</div>
+
+			<br></br>
+			<br></br>
+			<br></br>
+
+			<div className="card container" style={{width: 45% + 'em'}}>
+				<div className="card-body">
+					<h5 className="card-title searchfloof">Search Floof</h5>
+					<img src={require("./images/fox.jpeg")} />
+				      	<input value={this.state.zip} onChange={this.zipChange} type="text"/>
+				      	<select onChange={this.selectType}>
+				      		{options}
+				      	</select>
+				      	<button className="btn-info" onClick={this.handleSubmit}>Search</button>
+				</div>
+			</div>	
+
+			<br></br>
+			<br></br>
+			<br></br>
+
+		    <Route path="/random" render={(props) => <RandomPetBox pet={this.props.randomPet}/>} />
+		    <Route path="/search" render={(props) => <PetSearch {...props} pets={this.props.pets} />}/>
+
       </div>
     );
   }

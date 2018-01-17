@@ -51,33 +51,59 @@ class App extends Component {
 
       		<br></br>
 
-	      	<div className="card container" style={{width: 45% +'em'}}>
-	      		<div className="card-body">
-	      			<h5 className="card-title randfloof">Floof of Fate</h5>
-	      			<img src={require("./images/dog.jpeg")} />
-			      		<button className="btn-success" onClick={this.randomClick}>Get Random Pet!</button>
-			     </div>
+      		<div className="container">
+	      		<div className="row">
+			      	<div className="card col-md-6">
+			      		<div className="card-body">
+
+			      			<div className="container">
+			      				<div className="col-md-12">
+					      			<h5 className="card-title randfloof">Floof of Fate</h5>
+					      			<img src={require("./images/dog.jpeg")} />
+					      		</div>
+					      	</div>	
+					      	
+							<br></br>	
+
+			      			<div className="container">
+			      				<div className="col-md-12">
+						      		<button className="btn-success" onClick={this.randomClick}>Get Random Pet!</button>
+						     	</div>
+						    </div>
+						     	
+					     </div>
+					</div>
+
+
+	
+
+					<div className="card col-md-6">
+						<div className="card-body">
+
+			      			<div className="container">
+			      				<div className="col-md-12">
+									<h5 className="card-title searchfloof">Search Floof</h5>
+									<img src={require("./images/fox.jpeg")} />
+								</div>
+							</div>
+
+							<br></br>
+
+			      			<div className="container">
+			      				<div className="col-md-12">
+						      		<input value={this.state.zip} onChange={this.zipChange} type="text"/>
+						      		<select onChange={this.selectType}>
+						      			{options}
+						      		</select>
+						      		<button className="btn-info" onClick={this.handleSubmit}>Search</button>
+						      	</div>
+						    </div>
+
+						</div>
+					</div>	
+				</div>
 			</div>
 
-			<br></br>
-			<br></br>
-			<br></br>
-
-			<div className="card container" style={{width: 45% + 'em'}}>
-				<div className="card-body">
-					<h5 className="card-title searchfloof">Search Floof</h5>
-					<img src={require("./images/fox.jpeg")} />
-				      	<input value={this.state.zip} onChange={this.zipChange} type="text"/>
-				      	<select onChange={this.selectType}>
-				      		{options}
-				      	</select>
-				      	<button className="btn-info" onClick={this.handleSubmit}>Search</button>
-				</div>
-			</div>	
-
-			<br></br>
-			<br></br>
-			<br></br>
 
 		    <Route path="/random" render={(props) => <RandomPetBox pet={this.props.randomPet}/>} />
 		    <Route path="/search" render={(props) => <PetSearch {...props} pets={this.props.pets} />}/>

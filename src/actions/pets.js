@@ -9,10 +9,14 @@
 // 		dispatch({type: "PUT_ONE_IN", payload: "WOOOO"})
 // 	}
 // }
+let options = {
+	mode: "cors"
+}
+
 
 export function getRandom(history){
 	return function(dispatch){
-		fetch('http://api.petfinder.com/pet.getRandom?output=full&format=json&key=544197f2305ef238cde857d47ef52298')
+		fetch('http://api.petfinder.com/pet.getRandom?output=full&format=json&key=544197f2305ef238cde857d47ef52298', options)
 		.then(res => res.json())
 		.then(res => {
 			let petData = res.petfinder.pet
@@ -37,7 +41,7 @@ export function searchByAnimal(animalType, zip, history){
 	return function(dispatch){
 		let url = `http://api.petfinder.com/pet.find?animal=${animalType}&location=${zip}&output=full&format=json&key=544197f2305ef238cde857d47ef52298`
 
-		fetch(url)
+		fetch(url, options)
 		.then(res => res.json())
 		.then(res => {
 			let pets = res.petfinder.pets.pet.map(pet => {

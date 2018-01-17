@@ -39,5 +39,33 @@ img {
 
 th {
 	font-size: 25px;
+	color: crimson;
+	font-family: 'Berkshire Swash', cursive;
 }
 
+td {
+	font-size: 20px;
+	color: crimson;
+	font-family: 'Patua One', cursive;
+}
+
+hr {
+	padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+	
+}
+
+footer {
+	text-align: center;
+	color: crimson;
+}
+
+.randPetName {
+	color: crimson;
+	font-size: 25px;
+	font-family: 'Berkshire Swash', cursive;
+
+}

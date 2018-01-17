@@ -62,7 +62,7 @@ class App extends Component {
 					      			<img src={require("./images/dog.jpeg")} />
 					      		</div>
 					      	</div>	
-					      	
+
 							<br></br>	
 
 			      			<div className="container">
@@ -91,7 +91,7 @@ class App extends Component {
 
 			      			<div className="container">
 			      				<div className="col-md-12">
-						      		<input value={this.state.zip} onChange={this.zipChange} type="text"/>
+						      		<input value={this.state.zip} onChange={this.zipChange} type="text" placeholder=" Zip Code"/>
 						      		<select onChange={this.selectType}>
 						      			{options}
 						      		</select>
@@ -104,9 +104,19 @@ class App extends Component {
 				</div>
 			</div>
 
+			<br></br>
+			<hr></hr>
+
 
 		    <Route path="/random" render={(props) => <RandomPetBox pet={this.props.randomPet}/>} />
 		    <Route path="/search" render={(props) => <PetSearch {...props} pets={this.props.pets} />}/>
+
+		    <br></br>
+		    <br></br>
+
+		    <hr></hr>
+
+		    <footer> Albert Hong &#169; 2017 Powered by React-Redux</footer>
 
       </div>
     );
